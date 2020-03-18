@@ -12,12 +12,15 @@
         <button v-on:click="counter++">Arttır</button>
         <button v-on:click="arttir">Method ile arttır</button>
         <p> {{ counter}} </p>
+        <p v-on:mousemove="update"> Kordinatlar : {{ x }} , {{ y }}</p>
     </div>
     <script type="text/javascript">
         new Vue({
             el: "#app",
             data : {
-                counter :0
+                counter :0,
+                x : 0,
+                y : 0
             },
             methods : {
                 showAlert : function(){
@@ -25,6 +28,10 @@
                 },
                 arttir : function(){
                     this.counter++;
+                },
+                update : function(event){
+                    this.x=event.clientX;
+                    this.y=event.clientY;
                 }
             }
         })
