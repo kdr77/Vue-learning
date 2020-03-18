@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+       
+        <button v-on:click="arttir"> Arttır</button>
+      
+        <p> {{ counter }}</p>
+        <p> {{ counter > 10 ? "counter 10dan büyüktür" : "counter 10dan küçüktür" }}</p>
+    </div>
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data : {
+               counter :0
+
+            },
+            methods : {
+                arttir : function(){
+                    this.counter++;
+                    //tek satırlı js kodlarını template içinde yazabiliriz.
+                },
+            }
+        })
+    </script>
+</body>
+
+</html>
