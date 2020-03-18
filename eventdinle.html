@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="showAlert">Alert Al</button>
+        <button v-on:click="counter++">Arttır</button>
+        <button v-on:click="arttir">Method ile arttır</button>
+        <p> {{ counter}} </p>
+    </div>
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data : {
+                counter :0
+            },
+            methods : {
+                showAlert : function(){
+                    alert();
+                },
+                arttir : function(){
+                    this.counter++;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
