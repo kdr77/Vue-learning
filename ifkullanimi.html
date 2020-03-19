@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <button @click="arttir">Artır</button>
+        <hr>
+        <button @click="azalt">Azalt</button>
+        <p>{{ counter }}</p>
+        <p v-if="counter <10">  10n küçüktür</p>
+        <p v-if="counter >10">  10dan büyüktür</p>
+        <p v-if="counter===10">
+        Sayı 10a eşittir
+        </p>
+        </div>
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+  data : {
+  counter :0
+  },
+  methods : {
+  	arttir : function(){
+    	this.counter++;
+    },
+    azalt : function(){
+    	this.counter--
+    }
+  }
+  
+    
+        })
+    </script>
+</body>
+
+</html>
